@@ -1,5 +1,10 @@
-    let Category = ./Category/Type
+    let Category = ./Type
+
+in  let extractSemigroupoid = ./extractSemigroupoid
+
+in  let semigroupoid = ./../Semigroupoid/terms.dhall
 
 in    λ(f : Type → Type → Type)
     → λ(category : Category f)
-    → { identity = category.identity, compose = category.compose }
+    →   { identity = category.identity }
+      ∧ semigroupoid f (extractSemigroupoid f category)
