@@ -1,0 +1,7 @@
+    let Arrow = ./Type
+
+in  let Category = ./../Category/Type
+
+in    λ(f : Type → Type → Type)
+    → λ(arrow : Arrow f)
+    → arrow.{ compose, identity } : Category f

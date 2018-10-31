@@ -1,0 +1,8 @@
+    let Strong = ./Type
+
+in  let Profunctor = ./../Profunctor/Type
+
+in    λ(f : Type → Type → Type)
+    → λ(strong : Strong f)
+    →   { dimap = strong.dimap, lmap = strong.lmap, rmap = strong.rmap }
+      : Profunctor f

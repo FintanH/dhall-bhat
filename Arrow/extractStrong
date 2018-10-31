@@ -1,0 +1,7 @@
+    let Arrow = ./Type
+
+in  let Strong = ./../Strong/Type
+
+in    λ(f : Type → Type → Type)
+    → λ(arrow : Arrow f)
+    → arrow.{ dimap, first, lmap, rmap, second } : Strong f
