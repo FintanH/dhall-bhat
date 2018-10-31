@@ -2,7 +2,7 @@
 
 in  let Applicative = ./../Applicative/Type
 
-in  let liftA2 = ./../Applicative/liftA2
+in  let lift = ./../Applicative/lift
 
 in  let fold = (./foldable).fold
 
@@ -16,7 +16,7 @@ in      ./foldable
             → λ(g : a → f b)
             → λ(ts : List a)
             →     let liftCons =
-                        liftA2
+                        lift
                         f
                         applicative
                         b
